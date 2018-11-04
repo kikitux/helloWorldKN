@@ -20,3 +20,4 @@ deploy:
   file: "./build/bin/HelloWorld/main/release/executable/helloWorldKN.kexe"
   on:
     repo: kikitux/helloWorldKN
+    tags: true
