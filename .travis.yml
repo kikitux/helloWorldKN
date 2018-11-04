@@ -1,14 +1,18 @@
 language: java
 dist: xenial
 jdk:
-- oraclejdk8
+- oraclejdk9
 
 env:
   global
   - GRADLE_USER_HOME=~/gradle_cache/.gradle
 
+install:
+  - ./gradlew --stacktrace assemble
+
 after_success:
-- find . -name '*kexe' -ls
+  - find . -name '*kexe' -ls
+
 deploy:
   provider: releases
   skip_cleanup: true
