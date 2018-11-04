@@ -13,7 +13,7 @@ before_cache:
 
 cache:
   directories:
-    - $HOME/.konan/cache/.lock
+    - $HOME/.konan/cache/
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 
