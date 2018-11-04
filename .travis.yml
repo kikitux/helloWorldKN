@@ -3,7 +3,7 @@ dist: xenial
 sudo: enabled
 
 jdk:
-- oraclejdk10
+- oraclejdk11
 
 install:
 - sudo ./gradlew assemble
