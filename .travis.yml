@@ -1,5 +1,7 @@
 language: java
 dist: xenial
+sudo: enabled
+
 jdk:
 - oraclejdk8
 
@@ -12,9 +14,9 @@ cache:
     - $HOME/.gradle/wrapper/
 
 install:
-- "./gradlew assemble"
+- sudo ./gradlew assemble
 script:
-- "./gradlew check"
+- sudo ./gradlew check
 after_success:
 - find . -name '*kexe' -ls
 deploy:
