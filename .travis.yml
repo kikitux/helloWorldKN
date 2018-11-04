@@ -1,14 +1,16 @@
 language: java
 dist: xenial
-sudo: enabled
-
 jdk:
-- oraclejdk11
+- oraclejdk8
+
+env:
+  global
+  - GRADLE_USER_HOME=~/gradle_cache/.gradle
 
 install:
-- sudo ./gradlew assemble
+- "./gradlew assemble"
 script:
-- sudo ./gradlew check
+- "./gradlew check"
 after_success:
 - find . -name '*kexe' -ls
 deploy:
