@@ -22,8 +22,8 @@ install:
 
 script:
   - ./gradlew check
+  
 after_success:
-
   - find . -name '*kexe' -ls
 
 deploy:
